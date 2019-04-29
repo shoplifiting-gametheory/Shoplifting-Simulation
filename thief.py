@@ -11,9 +11,9 @@ class Thief:
 	Parameter: the item to steal and the level of security
 	Return: the profit of the steal and the amount to steal for the next round
 	'''
-	def steal(self, stolenItem, securityLevel):		
+	def steal(self, stolenAmount, securityLevel):		
 		if random.random() * 100 <= securityLevel: #the thief got caught
-			return -3*stolenItem, stolenItem*0.75 
-			#stolenItem - 4*stolenItem = -3*stolenItem
+			return -3*stolenAmount, stolenAmount*0.75 
+			#stolenAmount - 4*stolenAmount = -3*stolenAmount
 		else:
-			return stolenItem, stolenItem*1.25
+			return stolenAmount, stolenAmount*1.25
