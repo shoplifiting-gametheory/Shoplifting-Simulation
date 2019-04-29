@@ -10,7 +10,9 @@ class Supplier:
 	Return: the security level and the profit 
 	'''
 	def strategy(self, revenue, stolenAmount):
-		if stolenAmount > revenue:
+		if stolenAmount < 0:
+			return 30, revenue
+		elif stolenAmount > revenue:
 			return 80, 0
 		elif (stolenAmount/revenue) > 0.8:
 			return 80, revenue - stolenAmount
