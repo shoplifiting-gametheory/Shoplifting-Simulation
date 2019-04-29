@@ -18,6 +18,7 @@ class Supplier:
 			return 60, revenue - stolenAmount
 		else:
 			return 30, revenue - stolenAmount
+			
 
 
 	
