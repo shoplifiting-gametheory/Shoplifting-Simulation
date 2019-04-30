@@ -7,6 +7,7 @@ retailer = Retailer()
 supplier = Supplier()
 
 #Suppose the game starts from low security level and stealing $50
+#For ten cycles
 i = 0
 while i < 10:
 	stolenAmount, nextRound = thief.steal(50, 30)
