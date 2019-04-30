@@ -21,3 +21,11 @@ while i < 10:
 	print("Retailer spends ${} on security".format(security))
 	print("Security Supplier has profit of ${} and provides {}% level of security".format(profit, securityLevel))
 	i += 1
+
+tpoints = thief.points()
+rpoints = retailer.points()
+spoints = supplier.points()
+print("Thief: ", tpoints)
+print("Retailer: ", rpoints)
+print("Supplier: ", spoints)
+

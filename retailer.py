@@ -2,7 +2,7 @@
 #Chooses level of security vs profit made off of stuff that was not stolen
 
 class Retailer:
-
+        rpoints = 0
 	'''
 	Retailer decides the amount to spend on security base on the stolen rate
 	parameter: the amount of items that are stolen from thieves
@@ -10,6 +10,9 @@ class Retailer:
 	'''
 	def strategy(self, stolenAmount):
 		if stolenAmount < 0 or stolenAmount*0.8 < 10:
+                        
 			return 10
 
 		return stolenAmount*0.8
+	def points():
+                return rpoints

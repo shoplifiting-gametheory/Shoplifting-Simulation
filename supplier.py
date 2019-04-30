@@ -2,7 +2,7 @@
 #Security level (% of catching thieves): Low (30%), Medium (60%), High(80%) 
 
 class Supplier:
-
+        spoints = 0
 	'''
 	Supplier decides how much to spend on security base on the stolen amount and the amount 
 	of the retailer paid. 
@@ -20,6 +20,9 @@ class Supplier:
 			return 60, revenue - stolenAmount
 		else:
 			return 30, revenue - stolenAmount
+
+	def points():
+                return spoints
 			
 
 
