@@ -3,6 +3,7 @@ import random
 #Percentage of time thief gets caught is based on level of security
 
 class Thief:
+        tpoints = 0
 
 	'''
 	The thief knows the level of security and decide the amount to steal base on the level.
@@ -22,5 +23,8 @@ class Thief:
                         gain = stolenAmount
                         tpoints = tpoints + stolenAmount
                         stolenAmount = stolenAmount*1.25
-			return gain, stolenAmount 
+			return gain, stolenAmount
+
+	def points():
+                return tpoints
 		
