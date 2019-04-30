@@ -3,28 +3,21 @@ import random
 #Percentage of time thief gets caught is based on level of security
 
 class Thief:
-        tpoints = 0
-
-	'''
+        '''
 	The thief knows the level of security and decide the amount to steal base on the level.
 	If the thief got caught, the thief reduces the amount to steal by 25% for the next round. 
-	Otherwise, the thief increases the amount to steal by 25% for the next round.
-	Parameter: the item to steal and the level of security
-	Return: the profit of the steal and the amount to steal for the next round
-	'''
-	def steal(self, stolenAmount, securityLevel):		
-		if random.random() * 100 <= securityLevel: #the thief got caught
+        Otherwise, the thief increases the amount to steal by 25% for the next round.
+        Parameter: the item to steal and the level of security
+        Return: the profit of the steal and the amount to steal for the next round
+        '''
+        def steal(self, stolenAmount, securityLevel):		
+                if random.random() * 100 <= securityLevel: #the thief got caught
                         ppaid = -3*stolenAmount
-                        tpoints = tpoints + ppaid
                         stolenAmount = stolenAmount*0.75
-			return tpoints,stolenAmount  
-			#stolenAmount - 4*stolenAmount = -3*stolenAmount
-		else:
+                        return stolenAmount  
+                        #stolenAmount - 4*stolenAmount = -3*stolenAmount
+                else:
                         gain = stolenAmount
-                        tpoints = tpoints + stolenAmount
                         stolenAmount = stolenAmount*1.25
-			return gain, stolenAmount
-
-	def points():
-                return tpoints
+                        return gain, stolenAmount
 		
