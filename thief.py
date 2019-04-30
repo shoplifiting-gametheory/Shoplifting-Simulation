@@ -13,7 +13,14 @@ class Thief:
 	'''
 	def steal(self, stolenAmount, securityLevel):		
 		if random.random() * 100 <= securityLevel: #the thief got caught
-			return -3*stolenAmount, stolenAmount*0.75 
+                        ppaid = -3*stolenAmount
+                        tpoints = tpoints + ppaid
+                        stolenAmount = stolenAmount*0.75
+			return tpoints,stolenAmount  
 			#stolenAmount - 4*stolenAmount = -3*stolenAmount
 		else:
-			return stolenAmount, stolenAmount*1.25
+                        gain = stolenAmount
+                        tpoints = tpoints + stolenAmount
+                        stolenAmount = stolenAmount*1.25
+			return gain, stolenAmount 
+		
