@@ -14,7 +14,7 @@ class Thief:
                 if random.random() * 100 <= securityLevel: #the thief got caught
                         ppaid = -3*stolenAmount
                         stolenAmount = stolenAmount*0.75
-                        return stolenAmount  
+                        return ppaid, stolenAmount
                         #stolenAmount - 4*stolenAmount = -3*stolenAmount
                 else:
                         gain = stolenAmount
